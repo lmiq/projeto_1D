@@ -1,3 +1,5 @@
+using LinearAlgebra
+
 function Mataux(l, dr)
     Mvec = [3/4 for ii = 1:l[end]];
     Muvec, Mlvec = [[1/8 for ii = 1:l[end]-1] for jj = 1:2]; Muvec[end] = 1/4; Mlvec[1] = 1/4;

@@ -1,3 +1,5 @@
+using PreallocationTools
+
 function Configsimul(l, Vtot, A, Asup, dr, Lref)
     #Parâmetros e adimensionalização
     D = 4e-16; e = 1.6e-19; rhos = 1.35e28; Kb = 1.381e-23; T = 298; alpha = 0.5;
