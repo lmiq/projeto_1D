@@ -1,5 +1,3 @@
-using Distributions
-
 function geradist(npart, Lref, stdev, disc)
     l = Int.(round.(rand(myLogNormal(Lref/disc, stdev/disc), npart))) .+ 1; dr = disc / Lref;
     for ii = length(l):-1:2

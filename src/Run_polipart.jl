@@ -1,8 +1,3 @@
-import Pkg; Pkg.activate("projeto_1D");
-
-using DifferentialEquations
-include("config.jl"); include("salvasimul.jl")
-
 function Run_polipart(npart, Lref, stdev, disc)
     #Função principar para as simulações
     #npart: número de partículas simuladas
@@ -14,7 +9,8 @@ function Run_polipart(npart, Lref, stdev, disc)
     
 
     #@time sol = solve(prob, Rodas4(), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
-    @time sol = solve(prob, FBDF(), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
+    #@time sol = solve(prob, FBDF(), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
+    sol = solve(prob, FBDF(), save_everystep=false, abstol = 1e-6, reltol = 1e-6, progress = true);
     
 
     #Salvando a solução

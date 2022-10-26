@@ -1,5 +1,3 @@
-include("Solve_BV!.jl")
-
 function Solve_BV2(i, i0, uend, Asup::Vector{Float64}, c, l::Vector{Int64}, k0::Float64, alpha::Float64, omga::Float64, uref::Float64, I::Float64)
     for ii = eachindex(l)
         i0[ii] = currtroc(c[l[ii]], k0, alpha, omga);

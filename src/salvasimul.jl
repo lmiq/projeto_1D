@@ -1,4 +1,3 @@
-include("Solve_BV2.jl");
 
 function salvasimul(sol, sufix, p, e, Kb, T, tref)
     l = p[1]::Vector{Int64}; 

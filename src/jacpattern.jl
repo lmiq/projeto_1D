@@ -1,5 +1,3 @@
-using SparseArrays
-
 function jacpattern(l)
     np = length(l); njace = 5*l[end]-7*np + np*(np-1);
     I, J = [ones(njace) for ii = 1:2]

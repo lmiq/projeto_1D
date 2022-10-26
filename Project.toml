@@ -1,6 +1,6 @@
-name = "Projeto_1D"
+name = "Projeto1D"
 uuid = "978af93b-f6ad-495d-ad17-c7d86135d4af"
-authors = ["eduar "]
+authors = ["eduardo"]
 version = "0.1.0"
 
 [deps]

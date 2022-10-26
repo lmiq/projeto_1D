@@ -1,5 +1,3 @@
-using PreallocationTools
-
 function Configsimul(l, Vtot, A, Asup, dr, Lref)
     #Parâmetros e adimensionalização
     D = 4e-16; e = 1.6e-19; rhos = 1.35e28; Kb = 1.381e-23; T = 298; alpha = 0.5;
@@ -13,7 +11,7 @@ function Configsimul(l, Vtot, A, Asup, dr, Lref)
 
     #Condição inicial e parâmetros
     c0 = [0.01 for ii = 1:l[end]];
-    p = [l, k0, alpha, omga, uref, I, dr, kapp, dualcache(i, 12), dualcache(i0, 12), dualcache(uend, 12), Asup, A];
+    p = (l, k0, alpha, omga, uref, I, dr, kapp, dualcache(i, 12), dualcache(i0, 12), dualcache(uend, 12), Asup, A);
 
     return c0, trun, p, e, Kb, T, tref
 end

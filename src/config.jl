@@ -1,4 +1,3 @@
-include("geradist.jl"); include("ddt_polipart!.jl"); include("Mataux.jl"); include("Configsimul.jl"); include("jacpattern.jl");
 
 function config(npart, Lref, stdev, disc)
     #Gera distribuição de partículas
@@ -12,6 +11,9 @@ function config(npart, Lref, stdev, disc)
     #teste(1, ddt_polipart!, c0, p);
     jc = jacpattern(l);
 
+    #@show "entrou"
+    #trun = 1000.
+    
     #resolvendo o sistema 1
     func = ODEFunction(ddt_polipart!, mass_matrix = MV, jac_prototype = jc);
     prob = ODEProblem(func, c0, (0, trun), p);
