@@ -1,4 +1,4 @@
-include("geradist.jl"); include("ddt_polipart!.jl"); include("Mataux.jl"); include("Configsimul.jl"); include("jacpattern.jl");
+include("geradist.jl"); include("ddt_polipart!.jl"); include("Mataux.jl"); include("Configsimul.jl"); include("teste.jl"); include("jacpattern.jl");
 
 function config(npart, Lref, stdev, disc)
     #Gera distribuição de partículas
