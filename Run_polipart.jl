@@ -12,8 +12,10 @@ function Run_polipart(npart, Lref, stdev, disc)
 
     prob, p, e, Kb, T, tref, trun = config(npart, Lref, stdev, disc);
     
-    #sol = solve(prob, Rodas4(linsolve = LUFactorization()), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
-    @time sol = solve(prob, FBDF(linsolve = LUFactorization()), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
+
+    #@time sol = solve(prob, Rodas4(), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
+    @time sol = solve(prob, FBDF(), saveat = trun/200, abstol = 1e-6, reltol = 1e-6, progress = true);
+    
 
     #Salvando a solução
     salvasimul(sol, "", p, e, Kb, T, tref)
