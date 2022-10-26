@@ -1,9 +1,9 @@
 function Mataux(l, dr)
     Mvec = [3/4 for ii = 1:l[end]];
     Muvec, Mlvec = [[1/8 for ii = 1:l[end]-1] for jj = 1:2]; Muvec[end] = 1/4; Mlvec[1] = 1/4;
-    Vvec = Array{Float64}(undef, l[end]);
-    A = Array{Float64}(undef, l[end]);
-    Asup = Array{Float64}(undef, length(l));
+    Vvec = Vector{Float64}(undef, l[end]);
+    A = Vector{Float64}(undef, l[end]);
+    Asup = Vector{Float64}(undef, length(l));
 
     init = 0;
     for jj = eachindex(l)

@@ -2,7 +2,7 @@
 function salvasimul(sol, sufix, p, e, Kb, T, tref)
     l = p[1]::Vector{Int64}; 
     k0 = p[2]::Float64; alpha = p[3]::Float64; omga = p[4]::Float64; uref = p[5]::Float64 ; I = p[6]::Float64; dr = p[7]::Float64; kapp = p[8]::Float64;
-    i, i0, uend = [Array{Float64}(undef, length(l)) for ii = 1:3]; 
+    i, i0, uend = [Vector{Float64}(undef, length(l)) for ii = 1:3]; 
     Asup = p[12]::Vector{Float64};
     A = p[13]::Vector{Float64};
 

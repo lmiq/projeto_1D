@@ -7,7 +7,7 @@ function Configsimul(l, Vtot, A, Asup, dr, Lref)
     cr = 0.1*(tref/3600); trun = 0.98/(cr); I = -1*Vtot*cr; 
 
     #Variáveis auxiliares
-    i, i0, uend = [Array{Float64}(undef, length(l)) for ii = 1:3];
+    i, i0, uend = [Vector{Float64}(undef, length(l)) for ii = 1:3];
 
     #Condição inicial e parâmetros
     c0 = [0.01 for ii = 1:l[end]];
